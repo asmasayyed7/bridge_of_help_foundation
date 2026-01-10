@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BridgeOfHelp | NGO Website</title>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: black;
+    }
+
+    /* Top Navigation */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+ .logo-area img {
+      width: 60px;
+      height: 65px;
+      object-fit: contain;
+    }
+   .logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1; /* allows more space */
+}
+
+.ngo-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0077b6;
+  white-space: nowrap; /* stops breaking */
+}
+
+@media (max-width: 600px) {
+  .ngo-name {
+    font-size: 18px; /* fits one line on phones */
+  }
+}
+
+    .top-links a {
+      margin-left: 12px;
+      text-decoration: none;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .donate-btn {
+      background-color: #2ecc71;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: black;
+    }
+
+    .hero h1 span {
+      color: #0077b6;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 15px auto;
+      color: black;
+      line-height: 1.6;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 30px 0;
+      font-weight: 600;
+      color: #0077b6;
+    }
+
+.stats div {
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+/* Mobile only (max-width 600px) */
+@media (max-width: 600px) {
+  .stats div {
+    width: 90px;
+  }
+}
+
+
+    .stats p {
+      font-size: 14px;
+      color: #333;
+      margin-top: 5px;
+      font-weight: 400;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 10px;
+    }
+    .about {
+  padding: 60px 20px;
+  text-align: center;
+  background-color:aliceblue;
+  margin: auto;
+}
+.about .content {
+  max-width: 900px;
+  margin: auto;
+}
+.about h3 {
+  font-size: 32px;
+  color: #0077b6;
+  font-weight: 700;
+  margin-bottom: 15px;
+
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #444;
+}
+@media(max-width: 600px ){
+  .about h3 {
+    font-size: 26.5px;
+  }
+  .about p{
+    font-size:14.5px ;
+  }
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-image {
+  width: 45%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.about-text {
+  width: 55%;
+}
+@media (max-width: 700px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+}
+
+    /* Your existing CSS ends here */
+
+
+/* -------------------- Responsive Starts Here -------------------- */
+@media (max-width: 900px) {
+  .top-bar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+/* activities section */
+   .activities {
+      text-align: center;
+      padding: 60px 20px;
+      background:  #f9f9f9;
+    }
+
+.activityTag h1{ color:#000; }
+.activityTag h1 span{ color:#0077b6; }
+
+    .activityTag h1 {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .activityTag p {
+      max-width: 650px;
+      margin: 15px auto;
+      color: black;
+      line-height: 1.6;
+    }
+.card {
+      background: #f8f8f8;
+      border-radius: 1px;
+      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.737);
+      width: 300px;
+      padding: 20px;
+      margin: 40px;
+      min-height: 50vh;
+      flex-direction: column;
+    
+      
+    }
+  .card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: 50% 10%;
+  object-position: 50% 10%; /* keeps head visible */
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+    .tags {
+      margin-bottom: 12px;
+      
+    }
+    .tag {
+      display: inline-block;
+      background: #e6eef8;
+      color: #7897ab;
+      padding: 4px 16px;
+      margin-right: 6px;
+      font-size: 13px;
+      border-radius: 999px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #23313e;
+    }
+    .card-desc {
+      color: #697b8d;
+      font-size: 0.98rem;
+      margin-bottom: 20px;
+     
+    }
+    .card-btn {
+      display: inline-block;
+      background: #e4edf8;
+      color: #6282a0;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-btn:hover {
+
+        background: #d7e7f7;
+
+    }
+  .card-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
+:root{
+  --bg1:#eaf7fb;
+  --bg2:#ffffff;
+  --card:#ffffff;
+  --border:#e8eef3;
+  --text:#102a43;
+  --muted:#6b7c93;
+  --btn:#2f9e63;
+  --btn-hover:#278a55;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:56px 18px 70px;
+}
+
+
+/* =========================
+   VOLUNTEER SECTION (NEW)
+   ========================= */
+
+.volunteer {
+  background: #d7e7f7;
+  padding: 70px 20px;
+}
+
+.volunteer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.volunteer__header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.volunteer__header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #102a43;
+}
+
+.volunteer__header p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Cards Grid */
+.volunteer__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* Individual Card */
+.volunteer__card {
+  background: #ffffff;
+  border: 1px solid #e8eef3;
+  border-radius: 14px;
+  padding: 26px 24px 22px;
+  box-shadow: 0 10px 26px rgba(16, 42, 67, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Title */
+.volunteer__card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #102a43;
+}
+
+/* Meta Info */
+.volunteer__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #6b7c93;
+}
+
+.volunteer__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.volunteer__icon {
+  width: 22px;
+  height: 22px;
+  background: #eef5fb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Description */
+.volunteer__desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4b5b70;
+  margin-bottom: 18px;
+}
+
+/* Requirements */
+.volunteer__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #102a43;
+}
+
+.volunteer__list {
+  padding-left: 18px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #719dd6;
+  margin-bottom: 22px;
+}
+
+/* Button */
+.volunteer__btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #2f9e63;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.volunteer__btn:hover {
+  background: #278a55;
+}
+
+.volunteer__btn:active {
+  transform: translateY(1px);
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+   ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .volunteer__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .volunteer__header h1 {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .volunteer {
+    padding: 50px 16px;
+  }
+
+  .volunteer__cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .volunteer__header h1 {
+    font-size: 28px;
+  }
+
+  .volunteer__header p {
+    font-size: 15px;
+  }
+}
+
+
+/* Footer Main */
+.footer {
+    background-color: #16365d;
+    color: #ffffff;
+    padding: 50px 20px 20px;
+}
+
+/* Container */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Footer Boxes */
+.footer-box {
+    flex: 1 1 250px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    color: #4cd3a3;
+    margin-bottom: 15px;
+}
+
+.footer-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Links */
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-box ul li a:hover {
+    color: #4cd3a3;
+}
+
+/* Icons */
+.footer-box i {
+    margin-right: 8px;
+    color: #4cd3a3;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+}
+
+.bottom-links a {
+    color: #ffffff;
+    font-size: 13px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.bottom-links a:hover {
+    color: #4cd3a3;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bottom-links a {
+        margin: 0 8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 15px 15px;
+    }
+
+    .footer-logo {
+        font-size: 20px;
+    }
+
+    .footer-box h3 {
+        font-size: 16px;
+    }
+}
+
+
+  </style>
+</head>
+<body>
+
+<header class="top-bar">
+  <div class="logo-area">
+    <img src="logo.jpg" alt="NGO Logo">
+    <span class="ngo-name">Bridge Of Help Foundation</span>
+  </div>
+
+  <div class="top-links">
+    <a href="#about"> About</a>
+    <a href="#Projects" >Projects</a>
+       <a href="#volunteer" >Volunteer</a>
+     <a href="#Contact" >Contact</a>
+    <a href="#" class="donate-btn">Donate</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Empowering <span>Communities</span> with Hope</h1>
+  <p>We work to support and uplift children and families through impactful programs and dedicated volunteers.</p>
+</section>
+
+<div class="stats">
+  <div>
+    <h2>500K+</h2>
+    <p>Lives Impacted</p>
+  </div>
+  <div>
+    <h2>150+</h2>
+    <p>Projects Completed</p>
+  </div>
+  <div>
+    <h2>25+</h2>
+    <p>Communities Reached</p>
+  </div>
+</div>
+
+<img src="voleenter.jpg" alt="Volunteers" class="hero-image">
+
+<section id="about" class="about">
+  <div class="about-container">
+    
+    
+    <div class="about-text">
+      <h3>About Us</h3>
+      <p>
+        Bridge of Help Foundation supports underprivileged children and families through
+        food and nutrition programs, volunteer activities, and events that help children feel
+        safe and cared for. We also guide families toward trusted organizations for health
+        and welfare support. Our mission is to empower communities through meaningful,
+        sustainable work that creates real change.
+      </p>
+    </div>
+    <img src="about area.jpg" alt="About Image" class="about-image">
+
+  </div>
+</section>
+<section id="Projects" class="activities">
+<div class="activityTag"> 
+ <h1>Our <span>activities</span></h1>
+  <p> Each activity is carefully designed with local communities to create sustainable, long-lasting impact that addresses real needs.</p>
+</div>
+  <div class="card-container">
+
+    <div class="card">
+      <img src="activity1.jpg" class="card-img">
+      <div class="tags">
+        <span class="tag">Nature</span>
+        <span class="tag">Lake</span>
+      </div>
+      <div class="card-title">Lago di Braies</div>
+      <div class="card-desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sodales morbi dignissim sed diam pharetra vitae ipsum odio.
+      </div>
+      <a class="card-btn" href="#">Read More</a>
+    </div>
+
+    <div class="card">
+      <img src="activity1.jpg" class="card-img">
+      <div class="tags">
+        <span class="tag">Nature</span>
+        <span class="tag">Lake</span>
+      </div>
+      <div class="card-title">Lago di Braies</div>
+      <div class="card-desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sodales morbi dignissim sed diam pharetra vitae ipsum odio.
+      </div>
+      <a class="card-btn" href="#">Read More</a>
+    </div>
+
+    <div class="card">
+      <img src="activity1.jpg" class="card-img">
+      <div class="tags">
+        <span class="tag">Nature</span>
+        <span class="tag">Lake</span>
+      </div>
+      <div class="card-title">Lago di Braies</div>
+      <div class="card-desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sodales morbi dignissim sed diam pharetra vitae ipsum odio.
+      </div>
+      <a class="card-btn" href="#">Read More</a>
+    </div>
+
+  </div>
+</section>
+
+  <section class="volunteer">
+  <div class="container">
+
+    <div class="volunteer__header">
+      <h1>Volunteer Opportunities</h1>
+      <p>Choose opportunities that match your availability and skills.</p>
+    </div>
+
+    <div class="volunteer__cards">
+
+      <!-- Card 1 -->
+      <div class="volunteer__card">
+        <h3>Field Volunteer</h3>
+
+        <div class="volunteer__meta">
+          <div class="volunteer__meta-item">
+            <span class="volunteer__icon">⏱</span> 3–6 months
+          </div>
+          <div class="volunteer__meta-item">
+            <span class="volunteer__icon">🌍</span> Various locations
+          </div>
+        </div>
+
+        <p class="volunteer__desc">
+          Work directly with communities on our active projects. Ideal for those
+          who want hands-on field experience.
+        </p>
+
+        <h4 class="volunteer__subtitle">Requirements:</h4>
+        <ul class="volunteer__list">
+          <li>Passion for social impact</li>
+          <li>Flexibility and adaptability</li>
+          <li>Willingness to learn</li>
+        </ul>
+
+        <button class="volunteer__btn">Apply Now</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="volunteer__card">
+        <h3>Remote Support</h3>
+
+        <div class="volunteer__meta">
+          <div class="volunteer__meta-item">
+            <span class="volunteer__icon">⏱</span> Flexible hours
+          </div>
+          <div class="volunteer__meta-item">
+            <span class="volunteer__icon">🏠</span> Work from home
+          </div>
+        </div>
+
+        <p class="volunteer__desc">
+          Support our operations remotely through marketing, communications,
+          data analysis, or fundraising.
+        </p>
+
+        <h4 class="volunteer__subtitle">Requirements:</h4>
+        <ul class="volunteer__list">
+          <li>Reliable internet connection</li>
+          <li>Relevant professional skills</li>
+          <li>Minimum 3 hours per week</li>
+        </ul>
+
+        <button class="volunteer__btn">Apply Now</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="volunteer__card">
+        <h3>Local Ambassador</h3>
+
+        <div class="volunteer__meta">
+          <div class="volunteer__meta-item">
+            <span class="volunteer__icon">⏱</span> 2–4 hours / week
+          </div>
+          <div class="volunteer__meta-item">
+            <span class="volunteer__icon">📍</span> Your city
+          </div>
+        </div>
+
+        <p class="volunteer__desc">
+          Organize local fundraising events, awareness campaigns, and
+          community engagement activities.
+        </p>
+
+        <h4 class="volunteer__subtitle">Requirements:</h4>
+        <ul class="volunteer__list">
+          <li>Strong communication skills</li>
+          <li>Event planning experience</li>
+          <li>Local network connections</li>
+        </ul>
+
+        <button class="volunteer__btn">Apply Now</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- fotter the end part -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- NGO Name & Description -->
+        <div class="footer-box">
+            <h2 class="footer-logo">Bridge of Help Foundation</h2>
+            <p>
+                Building hope and transforming lives through sustainable,
+                community-driven initiatives in education, healthcare, and social welfare.
+            </p>
+        </div>
+
+        <!-- Get Involved -->
+        <div class="footer-box">
+            <h3>Get Involved</h3>
+            <ul>
+                <li><a href="#">Make a Donation</a></li>
+                <li><a href="#">Volunteer</a></li>
+            </ul>
+        </div>
+
+        <!-- Stay Connected -->
+        <div class="footer-box">
+            <h3>Stay Connected</h3>
+            <p><i class="fas fa-envelope"></i> info@bridgeofhelp.org</p>
+            <p><i class="fas fa-phone"></i> +91 90000 00000</p>
+            <p><i class="fas fa-location-dot"></i> Mumbai & Navi Mumbai, India</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+        <p>© 2024 Bridge of Help Foundation. All rights reserved.</p>
+        <div class="bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
