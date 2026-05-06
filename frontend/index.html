@@ -1,883 +1,1286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BridgeOfHelp | NGO Website</title>
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #ffffff;
-      color: black;
-    }
-
-    /* Top Navigation */
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
- .logo-area img {
-      width: 60px;
-      height: 65px;
-      object-fit: contain;
-    }
-   .logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1; /* allows more space */
-}
-
-.ngo-name {
-  font-size: 22px;
-  font-weight: 600;
-  color: #0077b6;
-  white-space: nowrap; /* stops breaking */
-}
-
-@media (max-width: 600px) {
-  .ngo-name {
-    font-size: 18px; /* fits one line on phones */
-  }
-}
-
-    .top-links a {
-      margin-left: 12px;
-      text-decoration: none;
-      color: #555;
-      font-size: 16px;
-    }
-
-    .donate-btn {
-      background-color: #2ecc71;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      border: none;
-      font-weight: 600;
-    }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: #f9f9f9;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      font-weight: 700;
-      color: black;
-    }
-
-    .hero h1 span {
-      color: #0077b6;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: 15px auto;
-      color: black;
-      line-height: 1.6;
-    }
-
-    /* Stats */
-    .stats {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin: 30px 0;
-      font-weight: 600;
-      color: #0077b6;
-    }
-
-.stats div {
-  text-align: center;
-  background-color: aliceblue;
-  border-radius: 5px;
-}
-
-/* Mobile only (max-width 600px) */
-@media (max-width: 600px) {
-  .stats div {
-    width: 90px;
-  }
-}
-
-
-    .stats p {
-      font-size: 14px;
-      color: #333;
-      margin-top: 5px;
-      font-weight: 400;
-    }
-
-    .hero-image {
-      width: 100%;
-      max-width: 900px;
-      display: block;
-      margin: 30px auto;
-      border-radius: 10px;
-    }
-    .about {
-  padding: 60px 20px;
-  text-align: center;
-  background-color:aliceblue;
-  margin: auto;
-}
-.about .content {
-  max-width: 900px;
-  margin: auto;
-}
-.about h3 {
-  font-size: 32px;
-  color: #0077b6;
-  font-weight: 700;
-  margin-bottom: 15px;
-
-}
-
-.about p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: #444;
-}
-@media(max-width: 600px ){
-  .about h3 {
-    font-size: 26.5px;
-  }
-  .about p{
-    font-size:14.5px ;
-  }
-}
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.about-image {
-  width: 45%;
-  max-width: 450px;
-  border-radius: 10px;
-}
-
-.about-text {
-  width: 55%;
-}
-@media (max-width: 700px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image {
-    width: 100%;
-  }
-
-  .about-text {
-    width: 100%;
-  }
-}
-
-    /* Your existing CSS ends here */
-
-
-/* -------------------- Responsive Starts Here -------------------- */
-@media (max-width: 900px) {
-  .top-bar {
-    flex-wrap: wrap;
-    padding: 15px 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .top-bar {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-}
-/* activities section */
-   .activities {
-      text-align: center;
-      padding: 60px 20px;
-      background:  #f9f9f9;
-    }
-
-.activityTag h1{ color:#000; }
-.activityTag h1 span{ color:#0077b6; }
-
-    .activityTag h1 {
-      font-size: 36px;
-      font-weight: 700;
-    }
-
-    .activityTag p {
-      max-width: 650px;
-      margin: 15px auto;
-      color: black;
-      line-height: 1.6;
-    }
-.card {
-      background: #f8f8f8;
-      border-radius: 1px;
-      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.737);
-      width: 300px;
-      padding: 20px;
-      margin: 40px;
-      min-height: 50vh;
-      flex-direction: column;
-    
-      
-    }
-  .card-img {
-  width: 100%;
-  height: 180px;
-  object-fit: 50% 10%;
-  object-position: 50% 10%; /* keeps head visible */
-  border-radius: 16px;
-  margin-bottom: 16px;
-}
-
-    .tags {
-      margin-bottom: 12px;
-      
-    }
-    .tag {
-      display: inline-block;
-      background: #e6eef8;
-      color: #7897ab;
-      padding: 4px 16px;
-      margin-right: 6px;
-      font-size: 13px;
-      border-radius: 999px;
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #23313e;
-    }
-    .card-desc {
-      color: #697b8d;
-      font-size: 0.98rem;
-      margin-bottom: 20px;
-     
-    }
-    .card-btn {
-      display: inline-block;
-      background: #e4edf8;
-      color: #6282a0;
-      padding: 10px 28px;
-      border: none;
-      border-radius: 30px;
-      font-weight: 500;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: background 0.2s;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .card-btn:hover {
-
-        background: #d7e7f7;
-
-    }
-  .card-container {
-  display: flex;
-  gap: 20px;
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 10px;
-}
-
-@media (max-width: 800px) {
-  .card-container {
-    flex-direction: column;
-  }
-}
-:root{
-  --bg1:#eaf7fb;
-  --bg2:#ffffff;
-  --card:#ffffff;
-  --border:#e8eef3;
-  --text:#102a43;
-  --muted:#6b7c93;
-  --btn:#2f9e63;
-  --btn-hover:#278a55;
-}
-
-*{ box-sizing:border-box; }
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--text);
-  background: linear-gradient(180deg, var(--bg1), var(--bg2));
-}
-
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:56px 18px 70px;
-}
-
-
-/* =========================
-   VOLUNTEER SECTION (NEW)
-   ========================= */
-
-.volunteer {
-  background: #d7e7f7;
-  padding: 70px 20px;
-}
-
-.volunteer .container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Header */
-.volunteer__header {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 40px;
-}
-
-.volunteer__header h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #102a43;
-}
-
-.volunteer__header p {
-  font-size: 16px;
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-/* Cards Grid */
-.volunteer__cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
-  gap: 28px;
-}
-
-/* Individual Card */
-.volunteer__card {
-  background: #ffffff;
-  border: 1px solid #e8eef3;
-  border-radius: 14px;
-  padding: 26px 24px 22px;
-  box-shadow: 0 10px 26px rgba(16, 42, 67, 0.06);
-  display: flex;
-  flex-direction: column;
-}
-
-/* Card Title */
-.volunteer__card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 14px;
-  color: #102a43;
-}
-
-/* Meta Info */
-.volunteer__meta {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  color: #6b7c93;
-}
-
-.volunteer__meta-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.volunteer__icon {
-  width: 22px;
-  height: 22px;
-  background: #eef5fb;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-}
-
-/* Description */
-.volunteer__desc {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: #4b5b70;
-  margin-bottom: 18px;
-}
-
-/* Requirements */
-.volunteer__subtitle {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #102a43;
-}
-
-.volunteer__list {
-  padding-left: 18px;
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: #719dd6;
-  margin-bottom: 22px;
-}
-
-/* Button */
-.volunteer__btn {
-  margin-top: auto;
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: none;
-  background: #2f9e63;
-  color: #ffffff;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.05s ease;
-}
-
-.volunteer__btn:hover {
-  background: #278a55;
-}
-
-.volunteer__btn:active {
-  transform: translateY(1px);
-}
-
-/* =========================
-   RESPONSIVE BREAKPOINTS
-   ========================= */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  .volunteer__cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .volunteer__header h1 {
-    font-size: 34px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-  .volunteer {
-    padding: 50px 16px;
-  }
-
-  .volunteer__cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .volunteer__header h1 {
-    font-size: 28px;
-  }
-
-  .volunteer__header p {
-    font-size: 15px;
-  }
-}
-
-
-/* Footer Main */
-.footer {
-    background-color: #16365d;
-    color: #ffffff;
-    padding: 50px 20px 20px;
-}
-
-/* Container */
-.footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-/* Footer Boxes */
-.footer-box {
-    flex: 1 1 250px;
-}
-
-.footer-logo {
-    font-size: 22px;
-    color: #4cd3a3;
-    margin-bottom: 15px;
-}
-
-.footer-box h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.footer-box p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* Links */
-.footer-box ul {
-    list-style: none;
-}
-
-.footer-box ul li {
-    margin-bottom: 10px;
-}
-
-.footer-box ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 14px;
-}
-
-.footer-box ul li a:hover {
-    color: #4cd3a3;
-}
-
-/* Icons */
-.footer-box i {
-    margin-right: 8px;
-    color: #4cd3a3;
-}
-
-/* Bottom Footer */
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 30px;
-    padding-top: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.footer-bottom p {
-    font-size: 13px;
-}
-
-.bottom-links a {
-    color: #ffffff;
-    font-size: 13px;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-.bottom-links a:hover {
-    color: #4cd3a3;
-}
-
-/* Responsive Design */
-
-/* Tablets */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BridgeOfHelp | NGO Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* ===== GOLDEN, WHITE & BLACK THEME ===== */
+
+      /* CSS Variables */
+      :root {
+        --gold: #2980b9; /* mapped to secondary blue */
+        --gold-light: #3498db; /* mapped to light blue accent */
+        --gold-dark: #1a3b5d; /* mapped to dark primary blue */
+        --black: #2c3e50;
+        --black-soft: #34495e;
+        --white: #ffffff;
+        --off-white: #f4f7f6;
+        --grey-light: #e2e8f0;
+        --grey-mid: #7f8c8d;
+        --sky-blue: #eef2f5;
+        --shadow-gold: rgba(26, 59, 93, 0.15); /* shadow mapped to dark blue */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Poppins",
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          sans-serif;
+        margin: 0;
+        background-color: var(--off-white);
+        color: var(--black);
+      }
+
+      /* ===== TOP NAVIGATION (BASE) ===== */
+      .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        background: var(--white);
+        box-shadow: 0 2px 8px rgba(212, 160, 23, 0.2);
+        border-bottom: 3px solid var(--gold);
+        position: relative;
+        z-index: 100;
+      }
+
+      .logo-area img {
+        width: 60px;
+        height: 65px;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+      }
+
+      .ngo-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--gold-dark);
+        white-space: nowrap;
+        letter-spacing: 0.5px;
+      }
+
+      @media (max-width: 600px) {
+        .ngo-name {
+          font-size: 18px;
+        }
+      }
+
+      .top-links a {
+        text-decoration: none;
+        color: #444444;
+        font-size: 15px;
+        transition: color 0.2s;
+        display: block;
+        padding: 0.5rem 0;
+      }
+
+      .top-links a:hover {
+        color: var(--gold-light);
+      }
+
+      .donate-btn {
+        background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+        color: var(--black);
+        padding: 8px 18px;
+        border-radius: 6px;
+        border: none;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        transition:
+          opacity 0.2s,
+          transform 0.1s;
+      }
+
+      .donate-btn:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
+
+      /* ===== HERO ===== */
+      .hero {
         text-align: center;
-    }
+        padding: 70px 20px;
+        background: linear-gradient(
+          135deg,
+          var(--gold-dark) 0%,
+          var(--gold) 100%
+        );
+        border-bottom: 3px solid var(--grey-light);
+      }
 
-    .footer-bottom {
-        flex-direction: column;
+      .hero h1 {
+        font-size: 38px;
+        font-weight: 700;
+        color: var(--white);
+      }
+
+      .hero h1 span {
+        color: var(--gold-light);
+      }
+
+      .hero p {
+        max-width: 650px;
+        margin: 15px auto;
+        color: #e8e8e8;
+        line-height: 1.7;
+      }
+
+      /* ===== STATS ===== */
+      .stats {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin: 30px 0;
+        font-weight: 700;
+        color: var(--gold);
+        background: var(--off-white);
+        padding: 30px 20px;
+      }
+
+      .stats div {
         text-align: center;
-    }
+        background: var(--white);
+        border: 2px solid var(--gold-light);
+        border-radius: 10px;
+        padding: 14px 22px;
+        box-shadow: 0 4px 14px var(--shadow-gold);
+      }
 
-    .bottom-links a {
-        margin: 0 8px;
-    }
-}
+      @media (max-width: 600px) {
+        .stats div {
+          width: 110px;
+        }
+      }
 
-/* Mobile */
-@media (max-width: 480px) {
-    .footer {
-        padding: 40px 15px 15px;
-    }
+      .stats p {
+        font-size: 14px;
+        color: var(--black);
+        margin-top: 5px;
+        font-weight: 400;
+      }
 
-    .footer-logo {
-        font-size: 20px;
-    }
+      .hero-image {
+        width: 100%;
+        max-width: 900px;
+        display: block;
+        margin: 30px auto;
+        border-radius: 10px;
+        border: 3px solid var(--gold);
+      }
 
-    .footer-box h3 {
+      /* ===== ABOUT ===== */
+      .about {
+        padding: 60px 20px;
+        text-align: center;
+        background-color: var(--off-white);
+        margin: auto;
+      }
+
+      .about .content {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .about h3 {
+        font-size: 32px;
+        color: var(--gold-dark);
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .about p {
         font-size: 16px;
-    }
-}
+        line-height: 1.65;
+        color: #333333;
+      }
 
+      @media (max-width: 600px) {
+        .about h3 {
+          font-size: 26.5px;
+        }
+        .about p {
+          font-size: 14.5px;
+        }
+      }
 
-  </style>
-</head>
-<body>
+      .about-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        max-width: 1000px;
+        margin: auto;
+      }
 
-<header class="top-bar">
-  <div class="logo-area">
-    <img src="logo.jpg" alt="NGO Logo">
-    <span class="ngo-name">Bridge Of Help Foundation</span>
-  </div>
+      .about-image {
+        width: 45%;
+        max-width: 450px;
+        border-radius: 10px;
+        border: 3px solid var(--gold);
+      }
 
-  <div class="top-links">
-    <a href="#about"> About</a>
-    <a href="#Projects" >Projects</a>
-       <a href="#volunteer" >Volunteer</a>
-     <a href="#Contact" >Contact</a>
-    <a href="#" class="donate-btn">Donate</a>
-  </div>
-</header>
+      .about-text {
+        width: 55%;
+      }
 
-<section class="hero">
-  <h1>Empowering <span>Communities</span> with Hope</h1>
-  <p>We work to support and uplift children and families through impactful programs and dedicated volunteers.</p>
-</section>
+      @media (max-width: 700px) {
+        .about-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        .about-image {
+          width: 100%;
+        }
+        .about-text {
+          width: 100%;
+        }
+      }
 
-<div class="stats">
-  <div>
-    <h2>500K+</h2>
-    <p>Lives Impacted</p>
-  </div>
-  <div>
-    <h2>150+</h2>
-    <p>Projects Completed</p>
-  </div>
-  <div>
-    <h2>25+</h2>
-    <p>Communities Reached</p>
-  </div>
-</div>
+      /* ===== BASIC RESPONSIVE NAVBAR LAYOUT (ADDITIONAL RULES BELOW) ===== */
 
-<img src="voleenter.jpg" alt="Volunteers" class="hero-image">
+      /* Mobile-first navbar */
+      .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        margin-left: auto;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        background-color: var(--white);
+        cursor: pointer;
+      }
 
-<section id="about" class="about">
-  <div class="about-container">
-    
-    
-    <div class="about-text">
-      <h3>About Us</h3>
+      .nav-toggle-line {
+        width: 18px;
+        height: 2px;
+        border-radius: 999px;
+        background-color: #222;
+        margin: 0 auto;
+        transition:
+          transform 0.2s ease,
+          opacity 0.2s ease;
+      }
+
+      .nav-toggle.nav-open-line .nav-toggle-line:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .nav-toggle.nav-open-line .nav-toggle-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle.nav-open-line .nav-toggle-line:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform-origin: top;
+        transition:
+          max-height 0.22s ease,
+          opacity 0.18s ease,
+          visibility 0.18s ease;
+        padding: 0 16px;
+      }
+
+      .nav-menu.nav-menu-open {
+        max-height: 260px;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-menu a {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      }
+
+      .nav-menu a:last-child {
+        border-bottom: none;
+      }
+
+      /* Desktop layout */
+      @media (min-width: 768px) {
+        .top-bar {
+          padding: 15px 50px;
+        }
+
+        .nav-toggle {
+          display: none;
+        }
+
+        .nav-menu {
+          position: static;
+          box-shadow: none;
+          max-height: none;
+          opacity: 1;
+          visibility: visible;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding: 0;
+        }
+
+        .nav-menu a {
+          border: none;
+          padding: 0;
+          margin-left: 12px;
+        }
+      }
+
+      /* ===== ACTIVITIES / CARDS SECTION ===== */
+      .activities {
+        text-align: center;
+        padding: 60px 20px;
+        background: var(--white);
+      }
+
+      .activityTag h1 {
+        color: var(--black);
+      }
+      .activityTag h1 span {
+        color: var(--gold);
+      }
+
+      .activityTag h1 {
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .activityTag p {
+        max-width: 650px;
+        margin: 15px auto;
+        color: var(--grey-mid);
+        line-height: 1.6;
+      }
+
+      .card {
+        background: var(--white);
+        border-radius: 14px;
+        box-shadow: 0 6px 20px var(--shadow-gold);
+        border: 1px solid var(--gold-light);
+        width: 300px;
+        padding: 20px;
+        margin: 20px;
+        min-height: 50vh;
+        flex-direction: column;
+      }
+
+      /* Extra content revealed by "Read More" */
+      .card-extra {
+        font-size: 0.93rem;
+        color: var(--grey-mid);
+        line-height: 1.65;
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid var(--grey-light);
+        animation: fadeInExtra 0.28s ease;
+      }
+
+      @keyframes fadeInExtra {
+        from { opacity: 0; transform: translateY(5px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .card-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        object-position: 50% 10%;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        border: 2px solid var(--gold-light);
+      }
+
+      .tags {
+        margin-bottom: 12px;
+      }
+
+      .tag {
+        display: inline-block;
+        background: var(--grey-light);
+        color: var(--gold-dark);
+        padding: 4px 16px;
+        margin-right: 6px;
+        font-size: 13px;
+        border-radius: 999px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        border: 1px solid var(--gold-light);
+      }
+
+      .card-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--black);
+      }
+
+      .card-desc {
+        color: var(--grey-mid);
+        font-size: 0.96rem;
+        margin-bottom: 20px;
+      }
+
+      .card-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+        background: #27ae60;
+        color: var(--white);
+        padding: 10px 28px;
+        border: none;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          opacity 0.2s,
+          transform 0.1s;
+      }
+
+      .card-btn:hover {
+        opacity: 0.88;
+        transform: translateY(-2px);
+      }
+
+      .card-container {
+        display: flex;
+        gap: 20px;
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 10px;
+      }
+
+      @media (max-width: 800px) {
+        .card-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      /* ===== VOLUNTEER SECTION ===== */
+      .volunteer {
+        background: var(--sky-blue);
+        padding: 70px 20px;
+        border-top: 3px solid var(--gold);
+        border-bottom: 3px solid var(--gold);
+      }
+
+      .volunteer .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .volunteer__header {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto 40px;
+      }
+
+      .volunteer__header h1 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--gold-dark);
+      }
+
+      .volunteer__header p {
+        font-size: 16px;
+        color: #555555;
+        line-height: 1.6;
+      }
+
+      .volunteer__cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(280px, 1fr));
+        gap: 28px;
+      }
+
+      .volunteer__card {
+        background: var(--white);
+        border: 1px solid var(--gold-light);
+        border-radius: 14px;
+        padding: 26px 24px 22px;
+        box-shadow: 0 10px 26px rgba(212, 160, 23, 0.15);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .volunteer__card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: var(--gold-dark);
+      }
+
+      .volunteer__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        color: #555555;
+      }
+
+      .volunteer__meta-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .volunteer__icon {
+        width: 22px;
+        height: 22px;
+        background: var(--grey-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        border: 1px solid var(--gold-light);
+      }
+
+      .volunteer__desc {
+        font-size: 14.5px;
+        line-height: 1.6;
+        color: #444444;
+        margin-bottom: 18px;
+      }
+
+      .volunteer__subtitle {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--gold);
+      }
+
+      .volunteer__list {
+        padding-left: 18px;
+        font-size: 14.5px;
+        line-height: 1.7;
+        color: #555555;
+        margin-bottom: 22px;
+      }
+
+      .volunteer__btn {
+        margin-top: auto;
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: none;
+        background: #27ae60;
+        color: var(--white);
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          opacity 0.2s ease,
+          transform 0.05s ease;
+      }
+
+      .volunteer__btn:hover {
+        opacity: 0.88;
+      }
+
+      .volunteer__btn:active {
+        transform: translateY(1px);
+      }
+
+      /* hint text below the sub-heading */
+      .volunteer__hint {
+        font-size: 14.5px;
+        color: #555555;
+        margin-top: 6px;
+      }
+
+      /* WhatsApp CTA banner inside the volunteer header */
+      .volunteer__wa-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 22px;
+        background: #25D366;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 12px 26px;
+        border-radius: 30px;
+        text-decoration: none;
+        box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+        transition: background 0.2s, transform 0.15s;
+      }
+
+      .volunteer__wa-cta:hover {
+        background: #1ebe5d;
+        transform: translateY(-2px);
+      }
+
+      .volunteer__wa-note {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #777;
+      }
+
+      @media (max-width: 1024px) {
+        .volunteer__cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .volunteer__header h1 {
+          font-size: 34px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .volunteer {
+          padding: 50px 16px;
+        }
+        .volunteer__cards {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .volunteer__header h1 {
+          font-size: 28px;
+        }
+        .volunteer__header p {
+          font-size: 15px;
+        }
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background-color: var(--gold-dark);
+        color: var(--white);
+        padding: 50px 20px 20px;
+        border-top: 3px solid var(--grey-light);
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .footer-box {
+        flex: 1 1 250px;
+      }
+
+      .footer-logo {
+        font-size: 22px;
+        color: var(--gold-light);
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .footer-box h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: var(--gold-light);
+      }
+
+      .footer-box p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+        color: #cccccc;
+      }
+
+      .footer-box ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-box ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-box ul li a {
+        text-decoration: none;
+        color: #cccccc;
+        font-size: 14px;
+        transition: color 0.2s;
+      }
+
+      .footer-box ul li a:hover {
+        color: var(--gold-light);
+      }
+
+      .footer-box i {
+        margin-right: 8px;
+        color: var(--gold);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(212, 160, 23, 0.3);
+        margin-top: 30px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .footer-bottom p {
+        font-size: 13px;
+        color: #aaaaaa;
+      }
+
+      .bottom-links a {
+        color: #cccccc;
+        font-size: 13px;
+        margin-left: 15px;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .bottom-links a:hover {
+        color: var(--gold-light);
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .bottom-links a {
+          margin: 0 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .footer {
+          padding: 40px 15px 15px;
+        }
+        .footer-logo {
+          font-size: 20px;
+        }
+        .footer-box h3 {
+          font-size: 16px;
+        }
+      }
+
+      /* ===== CONTACT SECTION ===== */
+      .contact-section {
+        padding: 80px 20px;
+        background-color: var(--white);
+      }
+
+      .contact-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-section h2 {
+        text-align: center;
+        font-size: 36px;
+        color: var(--gold-dark);
+        margin-bottom: 50px;
+        font-weight: 700;
+        position: relative;
+      }
+
+      .contact-section h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: var(--gold);
+      }
+
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 15px;
+        background-color: var(--off-white);
+        border-radius: 12px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .contact-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .contact-icon {
+        width: 45px;
+        height: 45px;
+        background-color: var(--white);
+        color: var(--gold);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        border: 1px solid var(--grey-light);
+        flex-shrink: 0;
+      }
+
+      .contact-content {
+        font-size: 16px;
+        color: var(--black-soft);
+        line-height: 1.4;
+      }
+
+      .contact-content strong {
+        display: block;
+        color: var(--gold-dark);
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+
+      .contact-socials {
+        display: flex;
+        gap: 20px;
+      }
+
+      .social-link {
+        color: var(--gold-dark);
+        text-decoration: none;
+        font-size: 24px;
+        transition:
+          color 0.2s,
+          transform 0.2s;
+      }
+
+      .social-link:hover {
+        color: var(--gold);
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 600px) {
+        .contact-section {
+          padding: 60px 15px;
+        }
+        .contact-section h2 {
+          font-size: 30px;
+        }
+        .contact-item {
+          padding: 12px;
+          gap: 15px;
+        }
+        .contact-content {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="logo-area">
+        <img src="logo.jpg" alt="NGO Logo" />
+        <span class="ngo-name">Bridge Of Help Foundation</span>
+      </div>
+
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <div class="top-links nav-menu" id="nav-menu">
+        <a href="#about">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#Contact">Contact</a>
+        <a href="#donate" class="donate-btn">Donate</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Empowering <span>Communities</span> with Hope</h1>
       <p>
-        Bridge of Help Foundation supports underprivileged children and families through
-        food and nutrition programs, volunteer activities, and events that help children feel
-        safe and cared for. We also guide families toward trusted organizations for health
-        and welfare support. Our mission is to empower communities through meaningful,
-        sustainable work that creates real change.
+        We work to support and uplift children and families through impactful
+        programs and dedicated volunteers.
       </p>
-    </div>
-    <img src="about area.jpg" alt="About Image" class="about-image">
+    </section>
 
-  </div>
-</section>
-<section id="Projects" class="activities">
-<div class="activityTag"> 
- <h1>Our <span>activities</span></h1>
-  <p> Each activity is carefully designed with local communities to create sustainable, long-lasting impact that addresses real needs.</p>
-</div>
-  <div class="card-container">
-
-    <div class="card">
-      <img src="activity1.jpg" class="card-img">
-      <div class="tags">
-        <span class="tag">Nature</span>
-        <span class="tag">Lake</span>
+    <div class="stats">
+      <div>
+        <h2>500K+</h2>
+        <p>Lives Impacted</p>
       </div>
-      <div class="card-title">Lago di Braies</div>
-      <div class="card-desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sodales morbi dignissim sed diam pharetra vitae ipsum odio.
+      <div>
+        <h2>150+</h2>
+        <p>Projects Completed</p>
       </div>
-      <a class="card-btn" href="#">Read More</a>
+      <div>
+        <h2>25+</h2>
+        <p>Communities Reached</p>
+      </div>
     </div>
 
-    <div class="card">
-      <img src="activity1.jpg" class="card-img">
-      <div class="tags">
-        <span class="tag">Nature</span>
-        <span class="tag">Lake</span>
+    <img src="about area.jpg" alt="Volunteers" class="hero-image" />
+
+    <section id="about" class="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h3>About Us</h3>
+          <p>
+            Bridge of Help Foundation supports underprivileged children and
+            families through food and nutrition programs, volunteer activities,
+            and events that help children feel safe and cared for. We also guide
+            families toward trusted organizations for health and welfare
+            support. Our mission is to empower communities through meaningful,
+            sustainable work that creates real change.
+          </p>
+        </div>
+        <img src="voleenter.jpg" alt="About Image" class="about-image" />
       </div>
-      <div class="card-title">Lago di Braies</div>
-      <div class="card-desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sodales morbi dignissim sed diam pharetra vitae ipsum odio.
+    </section>
+    <section id="Projects" class="activities">
+      <div class="activityTag">
+        <h1>Our <span>activities</span></h1>
+        <p>
+          Each activity is carefully designed with local communities to create
+          sustainable, long-lasting impact that addresses real needs.
+        </p>
       </div>
-      <a class="card-btn" href="#">Read More</a>
-    </div>
-
-    <div class="card">
-      <img src="activity1.jpg" class="card-img">
-      <div class="tags">
-        <span class="tag">Nature</span>
-        <span class="tag">Lake</span>
-      </div>
-      <div class="card-title">Lago di Braies</div>
-      <div class="card-desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sodales morbi dignissim sed diam pharetra vitae ipsum odio.
-      </div>
-      <a class="card-btn" href="#">Read More</a>
-    </div>
-
-  </div>
-</section>
-
-  <section class="volunteer">
-  <div class="container">
-
-    <div class="volunteer__header">
-      <h1>Volunteer Opportunities</h1>
-      <p>Choose opportunities that match your availability and skills.</p>
-    </div>
-
-    <div class="volunteer__cards">
-
-      <!-- Card 1 -->
-      <div class="volunteer__card">
-        <h3>Field Volunteer</h3>
-
-        <div class="volunteer__meta">
-          <div class="volunteer__meta-item">
-            <span class="volunteer__icon">⏱</span> 3–6 months
+      <div class="card-container">
+        <div class="card">
+          <img src="ad.jpeg" class="card-img" />
+          <div class="tags">
+            <span class="tag">Nutrition</span>
+            <span class="tag">Care </span>
           </div>
-          <div class="volunteer__meta-item">
-            <span class="volunteer__icon">🌍</span> Various locations
+          <div class="card-title">Food & Nutrition Programs</div>
+          <div class="card-desc">
+            We provide nutritious meals to children and families in need,
+            ensuring no one goes hungry. Our programs focus on balanced diets,
+            regular meal distribution, and spreading awareness about healthy
+            eating habits for better growth and well-being.
           </div>
+          <div class="card-extra" hidden>
+            Our food and nutrition programs deliver balanced meals to underprivileged
+            families in partnership with local suppliers. We run weekly drives that
+            directly reach hundreds of households, providing not just food but also
+            nutritional education and hygiene awareness to create lasting healthy habits.
+          </div>
+          <button class="card-btn" id="read-more-food">Read More</button>
         </div>
 
-        <p class="volunteer__desc">
-          Work directly with communities on our active projects. Ideal for those
-          who want hands-on field experience.
-        </p>
-
-        <h4 class="volunteer__subtitle">Requirements:</h4>
-        <ul class="volunteer__list">
-          <li>Passion for social impact</li>
-          <li>Flexibility and adaptability</li>
-          <li>Willingness to learn</li>
-        </ul>
-
-        <button class="volunteer__btn">Apply Now</button>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="volunteer__card">
-        <h3>Remote Support</h3>
-
-        <div class="volunteer__meta">
-          <div class="volunteer__meta-item">
-            <span class="volunteer__icon">⏱</span> Flexible hours
+        <div class="card">
+          <img src="third.jpeg" class="card-img" />
+          <div class="tags">
+            <span class="tag">Health</span>
+            <span class="tag">Safety</span>
           </div>
-          <div class="volunteer__meta-item">
-            <span class="volunteer__icon">🏠</span> Work from home
+          <div class="card-title">Healthcare & Medical Support</div>
+          <div class="card-desc">
+            We offer access to basic healthcare services, including regular
+            check-ups, medical camps, and emergency support. Our goal is to
+            ensure every child receives proper care, promoting a healthier and
+            safer life for underserved communities.
           </div>
+          <div class="card-extra" hidden>
+            We partner with local hospitals and medical NGOs to run free health camps
+            and check-up drives. Every child and family member receives a medical
+            assessment, prescribed medicines, and follow-up guidance. Trained volunteers
+            assist doctors and ensure the most vulnerable receive priority care and
+            emergency support.
+          </div>
+          <button class="card-btn" id="read-more-health">Read More</button>
         </div>
 
-        <p class="volunteer__desc">
-          Support our operations remotely through marketing, communications,
-          data analysis, or fundraising.
-        </p>
-
-        <h4 class="volunteer__subtitle">Requirements:</h4>
-        <ul class="volunteer__list">
-          <li>Reliable internet connection</li>
-          <li>Relevant professional skills</li>
-          <li>Minimum 3 hours per week</li>
-        </ul>
-
-        <button class="volunteer__btn">Apply Now</button>
+        <div class="card">
+          <img src="secound.jpeg" class="card-img" />
+          <div class="tags">
+            <span class="tag">Education</span>
+            <span class="tag">Future</span>
+          </div>
+          <div class="card-title">Learning & Education Support</div>
+          <div class="card-desc">
+            We empower children through education by providing school supplies,
+            learning programs, and guidance. Our initiative helps build strong
+            foundations, encouraging children to grow, learn, and create a
+            brighter future.
+          </div>
+          <div class="card-extra" hidden>
+            We organise community engagement events that bring children together for
+            sports, arts, and learning. These events strengthen social bonds, boost
+            confidence, and give children safe spaces to express themselves, supported
+            by trained volunteers and dedicated staff from Bridge of Help Foundation.
+          </div>
+          <button class="card-btn" id="read-more-education">Read More</button>
+        </div>
       </div>
+    </section>
 
-      <!-- Card 3 -->
-      <div class="volunteer__card">
-        <h3>Local Ambassador</h3>
+    <section id="volunteer" class="volunteer">
+      <div class="container">
+        <div class="volunteer__header">
+          <h1>Volunteer Opportunities</h1>
+          <p>Choose opportunities that match your availability and skills.</p>
+          <p class="volunteer__hint">📋 Click <strong>Apply Now</strong> to fill the official form, then join our WhatsApp group for updates.</p>
 
-        <div class="volunteer__meta">
-          <div class="volunteer__meta-item">
-            <span class="volunteer__icon">⏱</span> 2–4 hours / week
-          </div>
-          <div class="volunteer__meta-item">
-            <span class="volunteer__icon">📍</span> Your city
-          </div>
+          <a
+            href="https://chat.whatsapp.com/JrAducKGlG43NAhYTFHWsG"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="volunteer__wa-cta"
+            id="wa-group-link"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.103 1.51 5.831L0 24l6.335-1.663A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.007-1.37l-.36-.214-3.757.986.999-3.648-.232-.374A9.818 9.818 0 012.182 12C2.182 6.58 6.579 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.421-4.397 9.818-9.818 9.818z"/>
+            </svg>
+            Join Our WhatsApp Group
+          </a>
+          <p class="volunteer__wa-note">Already submitted the form? Join directly above! 👆</p>
         </div>
 
-        <p class="volunteer__desc">
-          Organize local fundraising events, awareness campaigns, and
-          community engagement activities.
-        </p>
+        <div class="volunteer__cards">
+          <!-- Card 1 -->
+          <div class="volunteer__card">
+            <h3>Field Volunteer</h3>
 
-        <h4 class="volunteer__subtitle">Requirements:</h4>
-        <ul class="volunteer__list">
-          <li>Strong communication skills</li>
-          <li>Event planning experience</li>
-          <li>Local network connections</li>
-        </ul>
+            <div class="volunteer__meta">
+              <div class="volunteer__meta-item">
+                <span class="volunteer__icon">⏱</span> 3–6 months
+              </div>
+              <div class="volunteer__meta-item">
+                <span class="volunteer__icon">🌍</span> Various locations
+              </div>
+            </div>
 
-        <button class="volunteer__btn">Apply Now</button>
+            <p class="volunteer__desc">
+              Work directly with communities on our active projects. Ideal for
+              those who want hands-on field experience.
+            </p>
+
+            <h4 class="volunteer__subtitle">Requirements:</h4>
+            <ul class="volunteer__list">
+              <li>Passion for social impact</li>
+              <li>Flexibility and adaptability</li>
+              <li>Willingness to learn</li>
+            </ul>
+
+            <button class="volunteer__btn">Apply Now</button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="volunteer__card">
+            <h3>Remote Support</h3>
+
+            <div class="volunteer__meta">
+              <div class="volunteer__meta-item">
+                <span class="volunteer__icon">⏱</span> Flexible hours
+              </div>
+              <div class="volunteer__meta-item">
+                <span class="volunteer__icon">🏠</span> Work from home
+              </div>
+            </div>
+
+            <p class="volunteer__desc">
+              Support our operations remotely through marketing, communications,
+              data analysis, or fundraising.
+            </p>
+
+            <h4 class="volunteer__subtitle">Requirements:</h4>
+            <ul class="volunteer__list">
+              <li>Reliable internet connection</li>
+              <li>Relevant professional skills</li>
+              <li>Minimum 3 hours per week</li>
+            </ul>
+
+            <button class="volunteer__btn">Apply Now</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="volunteer__card">
+            <h3>Local Ambassador</h3>
+
+            <div class="volunteer__meta">
+              <div class="volunteer__meta-item">
+                <span class="volunteer__icon">⏱</span> 2–4 hours / week
+              </div>
+              <div class="volunteer__meta-item">
+                <span class="volunteer__icon">📍</span> Your city
+              </div>
+            </div>
+
+            <p class="volunteer__desc">
+              Organize local fundraising events, awareness campaigns, and
+              community engagement activities.
+            </p>
+
+            <h4 class="volunteer__subtitle">Requirements:</h4>
+            <ul class="volunteer__list">
+              <li>Strong communication skills</li>
+              <li>Event planning experience</li>
+              <li>Local network connections</li>
+            </ul>
+
+            <button class="volunteer__btn">Apply Now</button>
+          </div>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <section id="Contact" class="contact-section">
+      <div class="contact-container">
+        <h2>Contact Us</h2>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <div class="contact-icon"><i class="fas fa-building"></i></div>
+            <div class="contact-content">
+              <strong>Bridge of Help Foundation</strong>
+              Organization Name
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+            <div class="contact-content">
+              <strong>Address</strong>
+              Navi Mumbai, Maharashtra, India
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-content">
+              <strong>Phone</strong>
+              +91 90000 00000
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-content">
+              <strong>Email</strong>
+              bridgeofhelpfoundation@gmail.com
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon"><i class="fas fa-share-nodes"></i></div>
+            <div class="contact-content">
+              <strong>Follow Us</strong>
+              <div class="contact-socials">
+                <a
+                  href="https://www.instagram.com/bridgeofhelp_foundation?igsh=MW4zMWd2YmM0ajQ2aw=="
+                  class="social-link"
+                  title="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/bridge-of-help-founda" 
+                class= "social-link"
+                title="LinkedIn"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#"  
+                class="social-link" 
+                title="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-<!-- fotter the end part -->
-<footer class="footer">
-    <div class="footer-container">
-
+    <!-- fotter the end part -->
+    <footer class="footer">
+      <div class="footer-container">
         <!-- NGO Name & Description -->
         <div class="footer-box">
-            <h2 class="footer-logo">Bridge of Help Foundation</h2>
-            <p>
-                Building hope and transforming lives through sustainable,
-                community-driven initiatives in education, healthcare, and social welfare.
-            </p>
+          <h2 class="footer-logo">Bridge of Help Foundation</h2>
+          <p>
+            Building hope and transforming lives through sustainable,
+            community-driven initiatives in education, healthcare, and social
+            welfare.
+          </p>
         </div>
 
         <!-- Get Involved -->
         <div class="footer-box">
-            <h3>Get Involved</h3>
-            <ul>
-                <li><a href="#">Make a Donation</a></li>
-                <li><a href="#">Volunteer</a></li>
-            </ul>
+          <h3>Get Involved</h3>
+          <ul>
+            <li><a href="#">Make a Donation</a></li>
+            <li><a href="#">Volunteer</a></li>
+          </ul>
         </div>
 
         <!-- Stay Connected -->
         <div class="footer-box">
-            <h3>Stay Connected</h3>
-            <p><i class="fas fa-envelope"></i> info@bridgeofhelp.org</p>
-            <p><i class="fas fa-phone"></i> +91 90000 00000</p>
-            <p><i class="fas fa-location-dot"></i> Mumbai & Navi Mumbai, India</p>
+          <h3>Stay Connected</h3>
+          <p>
+            <i class="fas fa-envelope"></i> bridgeofhelpfoundation@gmail.com
+          </p>
+          <p><i class="fas fa-phone"></i> +91 90000 00000</p>
+          <p><i class="fas fa-location-dot"></i> Mumbai & Navi Mumbai, India</p>
         </div>
+      </div>
 
-    </div>
-
-    <!-- Bottom Footer -->
-    <div class="footer-bottom">
-        <p>© 2024 Bridge of Help Foundation. All rights reserved.</p>
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <p>© 2025 Bridge of Help Foundation. All rights reserved.</p>
         <div class="bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
         </div>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
