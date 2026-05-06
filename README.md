@@ -65,9 +65,9 @@ This project is open source and available under the MIT License.
 ## Contact
 
 Bridge Of Help Foundation
-- Email: info@bridgeofhelp.org
+- Email:  bridgeofhelpfoundation@gmail.com
 - Location: Mumbai & Navi Mumbai, India
 
 ---
 
-© 2024 Bridge Of Help Foundation. All rights reserved.
+© 2025 Bridge Of Help Foundation. All rights reserved.
